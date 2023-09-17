@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+header {
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #F4F2EC;
+}
+
+.container {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box
+}
+
+.row {
+    /* margin: 0 8%; */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline div {
+    width: 25%;
+
+}
+
+.inline>.column {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.column {
+    column-count: 1;
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+.column li {
+    padding: 17px 0;
+    cursor: pointer;
+}
+
+.column li:first-child {
+    padding: 0 0 17px;
+}
+
+.column li a {
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+span {
+    color: #307632;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 21.6px;
+}
+
+.center svg {
+    margin-right: 25px;
+}
+
+div.row>ul>li:nth-child(1) {
+    width: 50%;
+}
+
+div.row>ul>li:nth-child(2),
+div.row>ul>li:nth-child(3) {
+    width: 25%;
+}
+
+div.row>ul>li:nth-child(3) {
+    display: flex;
+    justify-content: end;
+}
+
+.phone {
+    font-size: 24px;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+
+}
+
+.column .phone {
+    padding-left: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.socials {
+    box-sizing: border-box;
+    max-height: 24px;
+}
+
+ul.socials>li:nth-child(1),
+ul.socials>li:nth-child(2) {
+    margin-right: 60px;
+}
+
+.desktop-menu {
+    position: absolute;
+    background: white;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    z-index: 2;
+    padding: 53px 0;
+}
+
+
+.open {
+    top: 0;
+    transition-duration: .25s;
+}
+
+.callMe {
+    display: flex;
+    color: black;
+    border: 2px solid #307632;
+    box-shadow: none;
+    font-size: 24px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 344px;
+    line-height: 28.8px;
+}
+
+.empty {
+    height: 100vh;
+}
+
+@media (min-width: 374px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .inline div {
+        width: 100%;
+    }
+
+    .column .phone {
+        padding: 0;
+    }
+
+    .center span {
+        display: none;
+    }
+
+    header {
+        padding: 25px;
+    }
+
+    .orders .phone {
+        border-top: 1px solid #D9D9D9;
+        border-bottom: 1px solid #D9D9D9;
+        padding: 25px 0;
+        margin-top: 25px;
+        text-align: center;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    div.row>ul>li:nth-child(1),
+    div.row>ul>li:nth-child(3) {
+        width: 50%;
+    }
+
+    div.row>ul>li:nth-child(2) {
+        order: 1;
+        width: 50%;
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .orders>li:nth-child(2) {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .orders {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inline {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 0;
+    }
+
+    .inline>.column {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .callMe {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .inline div {
+        width: 25%;
+    }
+
+    .column .phone {
+        padding: 0;
+    }
+
+    .center span {
+        display: none;
+    }
+
+    header {
+        padding: 25px;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .orders .phone {
+        border-top: 1px solid #D9D9D9;
+        border-bottom: 1px solid #D9D9D9;
+        padding: 25px 0;
+        margin-top: 25px;
+        text-align: center;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    div.row>ul>li:nth-child(1),
+    div.row>ul>li:nth-child(3) {
+        width: 50%;
+    }
+
+    div.row>ul>li:nth-child(2) {
+        order: 1;
+        width: 50%;
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .orders>li:nth-child(2) {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .orders {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inline {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 0;
+    }
+
+    .inline>.column {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .callMe {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        padding: 35px;
+    }
+
+    .inline {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inline>.column {
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: end;
+        width: 25%;
+    }
+
+    .center span {
+        display: block;
+    }
+
+    .container {
+        max-width: 910px;
+    }
+
+    .column .phone {
+        margin: 0;
+        padding: 0;
+    }
+
+    div.row>ul>li:nth-child(1) {
+        width: 50%;
+    }
+
+    div.row>ul>li:nth-child(2),
+    div.row>ul>li:nth-child(3) {
+        width: 25%;
+    }
+
+    .orders .phone {
+        border: none;
+        margin: 0;
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    .orders {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    div.row>ul>li:nth-child(2) {
+        order: 0;
+        width: 25%;
+        flex: 0 0 auto;
+    }
+
+    .callMe {
+        max-width: 344px;
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    .orders .phone {
+        font-size: 24px;
+        justify-content: end;
+    }
+
+}
+
+@media (min-width: 1640px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    .callMe {
+        max-width: 100%;
+        padding: 30px;
+        font-size: 24px;
+    }
+
+}
